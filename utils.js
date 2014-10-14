@@ -1,5 +1,5 @@
 /**!
- * cnpm - utils.js
+ * mpm - utils.js
  *
  * Copyright(c) fengmk2 and other contributors.
  * MIT Licensed

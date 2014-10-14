@@ -1,7 +1,7 @@
 /**!
- * cnpm - origin_npm.js
+ * mpm - origin_npm.js
  *
- * Copyright(c) cnpmjs.org and other contributors.
+ * Copyright(c) mpmjs.org and other contributors.
  * MIT Licensed
  *
  * Authors:
@@ -16,7 +16,7 @@
  */
 
 require('colors');
-var debug = require('debug')('cnpm:origin');
+var debug = require('debug')('mpm:origin');
 var match = require('auto-correct');
 var spawn = require('cross-spawn');
 var fs = require('fs');
@@ -51,7 +51,7 @@ var nodeModulesDir = path.join(__dirname, 'node_modules', '.bin');
 var cmd = 'npm';
 cmd = path.join(nodeModulesDir, cmd);
 
-// if npm-beta not exists, use npm. happen on `$ cnpm install cnpm`
+// if npm-beta not exists, use npm. happen on `$ mpm install mpm`
 if (!fs.existsSync(cmd)) {
   cmd = 'npm';
 }

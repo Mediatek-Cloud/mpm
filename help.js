@@ -1,7 +1,7 @@
 /**!
- * cnpm - help.js
+ * mpm - help.js
  *
- * Copyright(c) cnpmjs.org and other contributors.
+ * Copyright(c) mpmjs.org and other contributors.
  * MIT Licensed
  *
  * Authors:
@@ -16,16 +16,16 @@
 var config = require('./config');
 
 module.exports = function outputHelp(argv) {
-  var helpInfo = 'Usage: cnpm [option] <command>\n' +
-  'Help: http://cnpmjs.org/help/cnpm\n\n' +
+  var helpInfo = 'Usage: mpm [option] <command>\n' +
+  'Help: http://mpmjs.org/help/mpm\n\n' +
   '  Extend command\n' +
-  '    web                            open cnpm web (ex.: tnpm web)\n' +
-  '    check [ingoreupdate]           check project dependencies, add ignoreupdate will not check modules\' latest version(ex.: cnpm check, cnpm check -i)\n' +
-  '    doc [moduleName]               open document page (ex.: cnpm doc urllib)\n' +
-  '    sync [moduleName]              sync module from source npm (ex.: cnpm sync urllib)\n' +
-  '    user [username]                open user profile page (ex.: cnpm user fengmk2)\n' +
+  '    web                            open mpm web (ex.: tnpm web)\n' +
+  '    check [ingoreupdate]           check project dependencies, add ignoreupdate will not check modules\' latest version(ex.: mpm check, mpm check -i)\n' +
+  '    doc [moduleName]               open document page (ex.: mpm doc urllib)\n' +
+  '    sync [moduleName]              sync module from source npm (ex.: mpm sync urllib)\n' +
+  '    user [username]                open user profile page (ex.: mpm user fengmk2)\n' +
   '\n' +
-  '  npm command use --registry=' + (argv.registry || config.cnpmRegistry) + '\n' +
+  '  npm command use --registry=' + (argv.registry || config.mpmRegistry) + '\n' +
   '    where <command> is one of:\n' +
   '    add-user, adduser, apihelp, author, bin, bugs, c, cache,\n' +
   '    completion, config, ddp, dedupe, deprecate, docs, edit,\n' +

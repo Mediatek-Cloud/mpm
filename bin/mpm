@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 /**!
- * cnpm - bin/cnpm
+ * mpm - bin/mpm
  *
- * Copyright(c) cnpmjs.org and other contributors.
+ * Copyright(c) mpmjs.org and other contributors.
  * MIT Licensed
  *
  * Authors:
@@ -16,7 +16,7 @@
  * Module dependencies.
  */
 
-var debug = require('debug')('cnpm');
+var debug = require('debug')('mpm');
 var pkg = require('../package.json');
 var argv = require('../parse_argv')();
 
@@ -31,10 +31,10 @@ var extendsMethd = {
   search: 1,
 };
 
-debug('cnpm %s', action);
+debug('mpm %s', action);
 
 if (extendsMethd[action]) {
-  return require('./cnpm-' + action);
+  return require('./mpm-' + action);
 }
 
 debug('origin npm with orgian registry: $ npm %s', action);

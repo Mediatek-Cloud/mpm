@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 /**!
- * cnpm - bin/cnpm-user
+ * mpm - bin/mpm-web
  *
- * Copyright(c) cnpmjs.org and other contributors.
+ * Copyright(c) mpmjs.org and other contributors.
  * MIT Licensed
  *
  * Authors:
@@ -20,6 +20,4 @@ var utils = require('../utils');
 var config = require('../config');
 var argv = require('../parse_argv')();
 
-var userURL = argv.registryweb + '/~' + argv.args[1];
-
-utils.openurl(userURL);
+utils.openurl(argv.registryweb);

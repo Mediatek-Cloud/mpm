@@ -1,7 +1,7 @@
 /**!
- * cnpm - parse_argv.js
+ * mpm - parse_argv.js
  *
- * Copyright(c) cnpmjs.org and other contributors.
+ * Copyright(c) mpmjs.org and other contributors.
  * MIT Licensed
  *
  * Authors:
@@ -25,8 +25,8 @@ var argv = null;
 module.exports = function (cmd) {
   if (!argv) {
     argv = program.version(pkg.version, '-v, --version')
-      .option('-r, --registry [registry]', 'registry url, default is ' + config.cnpmRegistry)
-      .option('-w, --registryweb [registryweb]', 'web url, default is ' + config.cnpmHost)
+      .option('-r, --registry [registry]', 'registry url, default is ' + config.mpmRegistry)
+      .option('-w, --registryweb [registryweb]', 'web url, default is ' + config.mpmHost)
       .option('--disturl [disturl]', 'dist url for node-gyp, default is ' + config.disturl)
       .option('-c, --cache [cache]', 'cache folder, default is ' + config.cache)
       .option('-u, --userconfig [userconfig]', 'userconfig file, default is ' + config.userconfig)
@@ -68,7 +68,7 @@ module.exports = function (cmd) {
     argv.registry = getDefaultRegistry(argv.userconfig);
   }
   argv.disturl = argv.disturl || config.disturl;
-  argv.registryweb = argv.registryweb || config.cnpmHost;
+  argv.registryweb = argv.registryweb || config.mpmHost;
   argv.cache = cacheInfo || config.cache;
 
   if (!argv.args.length) {
@@ -87,5 +87,5 @@ function getDefaultRegistry(userconfig) {
       return m[1];
     }
   }
-  return config.cnpmRegistry;
+  return config.mpmRegistry;
 }

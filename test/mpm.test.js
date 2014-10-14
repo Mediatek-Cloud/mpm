@@ -1,5 +1,5 @@
 /**!
- * cnpm - test/cnpm.test.js
+ * mpm - test/mpm.test.js
  *
  * Copyright(c) fengmk2 and other contributors.
  * MIT Licensed
@@ -18,13 +18,13 @@ var spawn = require('cross-spawn');
 var should = require('should');
 var path = require('path');
 var fse = require('fs-extra');
-var cnpm = path.join(__dirname, '..', 'bin', 'cnpm');
+var mpm = path.join(__dirname, '..', 'bin', 'mpm');
 var fixtures = path.join(__dirname, 'fixtures');
 
-describe('cnpm.test.js', function () {
+describe('mpm.test.js', function () {
   it('should install padding', function (done) {
     var args = [
-      cnpm,
+      mpm,
       'install',
       'pedding',
     ];
@@ -39,7 +39,7 @@ describe('cnpm.test.js', function () {
 
   it('should user custom registry in userconf', function (done) {
     var args = [
-      cnpm,
+      mpm,
       '--userconfig=' + path.join(fixtures, 'userconf'),
     ];
     var stdout = '';
@@ -55,7 +55,7 @@ describe('cnpm.test.js', function () {
 
   it('should --help user custom registry in userconf', function (done) {
     var args = [
-      cnpm,
+      mpm,
       '--help',
       '--userconfig=' + path.join(fixtures, 'userconf'),
     ];
@@ -72,12 +72,12 @@ describe('cnpm.test.js', function () {
 
   it('should user default registry in userconf dont contain registry', function (done) {
     var args = [
-      cnpm,
+      mpm,
       '--userconfig=' + path.join(fixtures, 'userconf-no-registry'),
     ];
     var stdout = '';
     var child = spawn('node', args).on('exit', function (code) {
-      stdout.should.containEql('npm command use --registry=https://registry.npm.taobao.org');
+      stdout.should.containEql('npm command use --registry=http://10.130.33.70:7001/');
       code.should.equal(0);
       done();
     });

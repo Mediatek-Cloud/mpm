@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 /*!
- * cnpm - bin/cnpm-check
+ * mpm - bin/mpm-check
  *
- * Copyright(c) cnpmjs.org and other contributors.
+ * Copyright(c) mpmjs.org and other contributors.
  * MIT Licensed
  *
  * Authors:
@@ -34,8 +34,8 @@ function checkUpdate() {
     if (!name) {
       return process.exit(0);
     }
-    var url = config.cnpmRegistry + '/' + name + '/latest';
-    urllib.request(url, {headers: {'user-agent': 'cnpm-check'}},
+    var url = config.mpmRegistry + '/' + name + '/latest';
+    urllib.request(url, {headers: {'user-agent': 'mpm-check'}},
     function (err, result) {
       var errmsg = '';
       if (err) {

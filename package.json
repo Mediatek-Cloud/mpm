@@ -1,20 +1,20 @@
 {
-  "name": "cnpm",
-  "version": "1.2.0",
-  "description": "cnpm: npm client for cnpmjs.org",
-  "main": "bin/cnpm",
+  "name": "mtk-pm",
+  "version": "1.2.3",
+  "description": "mtk-npm: npm client for mediatek",
+  "main": "bin/mpm",
   "scripts": {
     "test": "mocha test/*.test.js --timeout 10000"
   },
   "preferGlobal": true,
   "bin": {
-    "cnpm": "./bin/cnpm",
-    "cnpm-check": "./bin/cnpm-check",
-    "cnpm-sync": "./bin/cnpm-sync",
-    "cnpm-web": "./bin/cnpm-web",
-    "cnpm-user": "./bin/cnpm-user",
-    "cnpm-doc": "./bin/cnpm-doc",
-    "cnpm-search": "./bin/cnpm-search"
+    "mpm": "./bin/mpm",
+    "mpm-check": "./bin/mpm-check",
+    "mpm-sync": "./bin/mpm-sync",
+    "mpm-web": "./bin/mpm-web",
+    "mpm-user": "./bin/mpm-user",
+    "mpm-doc": "./bin/mpm-doc",
+    "mpm-search": "./bin/mpm-search"
   },
   "dependencies": {
     "auto-correct": "~1.0.0",
@@ -36,22 +36,24 @@
     "mocha": "~1.21.4",
     "should": "~4.0.4"
   },
-  "homepage": "https://github.com/cnpm/cnpm",
   "repository": {
     "type": "git",
-    "url": "git://github.com/cnpm/cnpm.git",
-    "web": "https://github.com/cnpm/cnpm"
+    "url": "git@github.com:Mediatek-Cloud/mpm.git",
+    "web": "https://github.com/Mediatek-Cloud/mpm.git"
   },
   "bugs": {
-    "url": "https://github.com/cnpm/cnpm/issues",
-    "email": "fengmk2@gmail.com"
+    "url": "https://github.com/Mediatek-Cloud/mpm/issues",
+    "email": "YuTin <yutin.liu@mediatek.com>"
   },
   "keywords": [
-    "cnpm"
+    "mpm"
   ],
   "engines": {
     "node": ">= 0.10.0"
   },
   "author": "fengmk2 <fengmk2@gmail.com> (http://fengmk2.github.com)",
+  "contributors": [
+    "YuTin <yutin.liu@mediatek.com>"
+  ],
   "license": "MIT"
 }

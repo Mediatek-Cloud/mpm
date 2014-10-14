@@ -25,6 +25,6 @@ test: install
 		$(TESTS)
 
 totoro:
-	@totoro --runner test/cnpm.test.js -b 'windowsXP/node/0.10,windowsXP/node/0.11,linux/node/0.10,linux/node/0.11'
+	@totoro --runner test/mpm.test.js -b 'windowsXP/node/0.10,windowsXP/node/0.11,linux/node/0.10,linux/node/0.11'
 
 .PHONY: test

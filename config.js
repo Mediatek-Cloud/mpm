@@ -1,7 +1,7 @@
 /**!
- * cnpm - config.js
+ * mpm - config.js
  *
- * Copyright(c) cnpmjs.org and other contributors.
+ * Copyright(c) mpmjs.org and other contributors.
  * MIT Licensed
  *
  * Authors:
@@ -26,9 +26,9 @@ if (process.platform === 'win32') {
 }
 
 var config = module.exports = {
-  cnpmHost: 'https://npm.taobao.org',
-  cnpmRegistry: 'https://registry.npm.taobao.org',
+  mpmHost: 'http://10.130.33.70:7002',
+  mpmRegistry: 'http://10.130.33.70:7001',
   disturl: 'https://npm.taobao.org/dist', // download dist tarball for node-gyp
-  cache: path.join(root, '.npm/.cache_cnpm'),  //cache folder name
-  userconfig: path.join(root, '.cnpmrc')
+  cache: path.join(root, '.npm/.cache_mpm'),  //cache folder name
+  userconfig: path.join(root, '.mpmrc')
 };

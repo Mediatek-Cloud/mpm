@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 /**!
- * cnpm - bin/cnpm-doc
+ * mpm - bin/mpm-doc
  *
- * Copyright(c) cnpmjs.org and other contributors.
+ * Copyright(c) mpmjs.org and other contributors.
  * MIT Licensed
  *
  * Authors:
